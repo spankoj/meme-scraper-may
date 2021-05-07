@@ -8,7 +8,7 @@
 
 ## Output
 
-In the **memes** folderin of below repository:
+In the **memes** folder of below repository:
 
 > https://github.com/spankoj/meme-scraper-may.git
 
