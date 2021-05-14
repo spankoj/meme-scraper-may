@@ -19,12 +19,22 @@ fetch('https://memegen-link-examples-upleveled.netlify.app/')
       firstTen.push(imgTags[i].split('"')[1]);
     }
 
+    // Create directory: memes
+    const memes = './memes';
+
+    try {
+      if (!fs.existsSync(memes)) {
+        fs.mkdirSync(memes);
+      }
+    } catch (err) {
+      console.error(err);
+    }
+
     // Create numbered filenames
     const fileNames = [];
     for (i = 0; i < 10; i++) {
       fileNames.push(`./memes/${i}_meme.jpg`);
     }
-
     // Function to save images using its url's to files
     const saveFile = function (memeurl, newpath) {
       const download = (url, path, callback) => {
